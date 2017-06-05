@@ -79,7 +79,6 @@ body {
   overflow-x: hidden;
   position: absolute;
   top: 0;
-  right: 0;
   z-index: -100;
 }
 
@@ -111,10 +110,38 @@ body {
   z-index: -200;
 }
 
+/* DESKTOP HD*/
+/*@media screen and (min-width: 2000px) {
+  #photo {
+    right: 0px;
+  }
+  body {
+    background-color: green;
+  }
+}*/
+
+/*@media screen and (max-width: 1999px) && (min-width: 1896px) {
+  #photo {
+    left: 800px;
+  }
+  body {
+    background-color: red;
+  }
+}*/
+
+/*@media screen and (min-width: 1201px) {
+  body {
+    background-color: red;
+  }
+  #case-study {
+    width: 100%;
+  }
+}*/
+
 /* DESKTOP */
 @media screen and (min-width: 1200px) {
   #content {
-    width: 50%;
+    width: 64%;
     padding: 104px 48px 104px 12%;
   }
   .headline {
@@ -130,8 +157,13 @@ body {
   .byline {
     font-size: 18px
   }
+  #photo {
+    padding-top: 104px;
+    right: 0;
+    width: 50%;
+  }
   #case-study {
-    width: 1400px;
+    /*width: 64%;*/
     padding: 124px 48px 104px 12%;
   }
 }
@@ -139,7 +171,7 @@ body {
 /*MID*/
 @media screen and (max-width: 1200px) {
   #content {
-    padding: 104px 48px 104px 30%;
+    padding: 104px 48px 104px 48px;
   }
   .headline {
     font-size: 80px;
@@ -150,11 +182,15 @@ body {
     line-height: 96px;
     margin-bottom: 16px;
   }
+  #photo {
+    display: none;
+  }
   #right-side {
     display: none;
   }
   #case-study {
     width: 100%;
+    padding: 104px 48px 104px 48px;
   }
 }
 
