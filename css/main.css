@@ -63,16 +63,60 @@ body {
   z-index: 100;
 }
 
+#title {
+  padding-bottom: 24px;
+}
+
 #headliner {
-  padding: 24px 0 24px 0;
+  padding: 32px 0 32px 0;
+  font-family: 'Lora', serif;
+}
+
+.case-title {
+  font-family: 'Lora', serif;
+  font-size: 32px;
+}
+.name {
+  font-size: 18px;
+}
+.email a {
+  color: #9fadb5;
+  font-size: 18px;
+}
+.byline {
+  font-size: 18px;
+}
+
+.headline {
+  font-weight: 600;
+  font-size: 96px;
+  margin-bottom: 16px;
 }
 
 #work-links {
   padding: 24px 0 24px 0;
 }
 
-#the-rest {
-  padding: 24px 0 24px 0;
+#work-links a {
+  font-weight: 100;
+  color: #50E3C2;
+}
+
+#work-links a:hover {
+  color: #256556;
+}
+
+a {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  text-decoration: none;
+  color: #41B89D;
+  text-decoration-style: solid;
+}
+
+a:hover {
+  color: #256556;
 }
 
 #photo {
@@ -83,26 +127,13 @@ body {
 }
 
 /* CASE STUDY */
-#flex-container {
-  display: flex;
-  background-color: #F8F8F8;
-}
-
 #case-study img {
-  width: 100%;
   padding-top: 48px;
   padding-bottom: 48px;
 }
-
-#right-side {
-  width: 50%;
-  /*background-color: #73CBFF;*/
-}
-
 #end {
   padding: 64px 0 64px 0;
 }
-
 .back-to-top {
   position: fixed;
   top: 24px;
@@ -110,42 +141,33 @@ body {
   z-index: -200;
 }
 
-/* DESKTOP HD*/
-/*@media screen and (min-width: 2000px) {
-  #photo {
-    right: 0px;
+/* DESKTOP X-LARGE*/
+/*@media screen and (min-width: 2300px) {
+#headliner {
+    width: 1300px;
+    background-color: red;
   }
-  body {
+}*/
+/*@media screen and (max-width: 1840px) {
+#headliner {
+    padding-right: 25%;
+  }
+}*/
+/*@media screen and (min-width: 1530px) {
+#headliner {
+    width: 1000px;
     background-color: green;
   }
 }*/
-
-/*@media screen and (max-width: 1999px) && (min-width: 1896px) {
-  #photo {
-    left: 800px;
-  }
+/* DESKTOP LARGE*/
+@media screen and (min-width: 1340px) {
   body {
-    background-color: red;
+    margin: 104px 48px 104px 148px;
   }
-}*/
-
-/*@media screen and (min-width: 1201px) {
-  body {
-    background-color: red;
-  }
-  #case-study {
-    width: 100%;
-  }
-}*/
-
-/* DESKTOP */
-@media screen and (min-width: 1200px) {
-  #content {
-    width: 64%;
-    padding: 104px 48px 104px 12%;
-  }
+  #headliner {
+      max-width: 1275px;
+    }
   .headline {
-    width: 75%;
     font-size: 96px;
     line-height: 124px;
   }
@@ -154,151 +176,132 @@ body {
     line-height: 80px;
     margin-bottom: 16px;
   }
-  .byline {
-    font-size: 18px
+  #photo {
+    padding-top: 104px;
+    right: 0;
+    width: 50%;
+  }
+  #content {
+    padding-bottom: 280px;
+  }
+  #case-study-header {
+    padding-bottom: 64px;
+  }
+  p {
+    line-height: 42px;
+    font-size: 24px;
+    font-weight: 100;
+    max-width: 1075px;
+  }
+}
+
+/* DESKTOP MID*/
+@media screen and (max-width: 1340px) {
+  body {
+    margin: 48px 48px 104px 48px;
+  }
+  .headline {
+    width: 75%;
+    font-size: 96px;
+    line-height: 124px;
+  }
+  #content {
+    padding-bottom: 204px;
+  }
+  #work-links a {
+    font-size: 64px;
+    line-height: 80px;
+    margin-bottom: 16px;
   }
   #photo {
     padding-top: 104px;
     right: 0;
     width: 50%;
   }
-  #case-study {
-    /*width: 64%;*/
-    padding: 124px 48px 104px 12%;
+  #case-study-header {
+    padding-bottom: 64px;
+  }
+  #case-study img {
+    width: 100%;
+  }
+  p {
+    line-height: 42px;
+    font-size: 24px;
+    font-weight: 100;
+    max-width: 1075px;
   }
 }
 
-/*MID*/
-@media screen and (max-width: 1200px) {
+/*TABLET*/
+@media screen and (max-width: 750px) {
+  body {
+    margin: 48px 48px 104px 48px;
+  }
+  .name, .email a {
+    font-size: 14px;
+  }
   #content {
-    padding: 104px 48px 104px 48px;
+    padding-bottom: 80px;
   }
   .headline {
-    font-size: 80px;
-    line-height: 96px;
+    font-size: 64px;
+    line-height: 80px;
   }
   #work-links a {
-    font-size: 64px;
-    line-height: 96px;
-    margin-bottom: 16px;
+    font-size: 48px;
+    line-height: 64px;
   }
   #photo {
     display: none;
   }
-  #right-side {
-    display: none;
+  #case-study-header {
+    padding-bottom: 24px;
   }
-  #case-study {
-    width: 100%;
-    padding: 104px 48px 104px 48px;
-  }
-}
-
-/* TABLET */
-@media screen and (max-width: 1000px) {
-  body {
-    /*width: 80%;*/
-  }
-  .headline {
-    font-size: 80px;
-    line-height: 96px;
-  }
-  #photo {
-    display: none;
-  }
-  #right-side {
-    display: none;
-  }
-  #case-study {
+  #case-study img {
     width: 100%;
   }
 }
 
 /* PHONE */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 450px) {
+  body {
+    margin: 16px 16px 16px 16px;
+  }
+  .name, .email a {
+    font-size: 12px;
+  }
   #content {
-    padding: 32px 16px 32px 16px;
-    width: auto;
+    padding-bottom: 64px;
   }
   .headline {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 32px;
+    line-height: 40px;
+    width: 100%;
   }
   #work-links a {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 32px;
+    line-height: 40px;
   }
-  #the-rest {
-    width: auto;
+  .case-title {
+    font-size: 24px;
   }
-  #case-study {
-    padding: 32px 16px 32px 16px;
+  .byline {
+    font-size: 16px;
+  }
+  #case-study-header {
+    padding-bottom: 16px;
   }
   #case-study img {
-    padding: 24px 0 24px 0;
+    width: 100%;
   }
   p {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 32px;
   }
-}
-
-/* TYPOGRAPHY */
-/* most sizing is in media queries though */
-.headline {
-  font-weight: 600;
-  font-size: 96px;
-  margin-bottom: 16px;
-}
-
-#headliner {
-  font-family: 'Lora', serif;
-}
-
-#work-links a {
-  font-weight: 100;
-}
-
-.case-title {
-  font-family: 'Lora', serif;
-  font-weight: 600;
-  font-size: 32px;
-}
-
-.case-intro {
-  padding-top: 24px;
-}
-
-p {
-  margin-bottom: 24px;
-  line-height: 36px;
-  font-size: 24px;
-  font-weight: 100;
-}
-
-a {
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  transition: color 0.1s linear;
-  text-decoration: none;
-  color: #73CBFF;
-}
-
-a:hover {
-  color: #229FE9;
 }
 
 
 /* FADE IN */
-/*body {
-  -webkit-animation: backgroundfade 1s;
-     -moz-animation: backgroundfade 1s;
-      -ms-animation: backgroundfade 1s;
-       -o-animation: backgroundfade 1s;
-          animation: backgroundfade 1s;
-          animation-timing-function: ease-in-out;
-}*/
-
 #title {
   -webkit-animation: fadein 0.1s; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 0.1s; /* Firefox < 16 */
@@ -326,30 +329,21 @@ a:hover {
           animation-timing-function: ease-in-out;
 }
 
-#the-rest {
-  -webkit-animation: slowerfadein 2s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: slowerfadein 2s; /* Firefox < 16 */
-      -ms-animation: slowerfadein 2s; /* Internet Explorer */
-       -o-animation: slowerfadein 2s; /* Opera < 12.1 */
-          animation: slowerfadein 2s;
-          animation-timing-function: ease-in-out;
-}
-
 #photo {
-  -webkit-animation: slowerfadein 2s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: slowerfadein 2s; /* Firefox < 16 */
-      -ms-animation: slowerfadein 2s; /* Internet Explorer */
-       -o-animation: slowerfadein 2s; /* Opera < 12.1 */
-          animation: slowerfadein 2s;
+  -webkit-animation: slowerfadein 1.6s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: slowerfadein 1.6s; /* Firefox < 16 */
+      -ms-animation: slowerfadein 1.6s; /* Internet Explorer */
+       -o-animation: slowerfadein 1.6s; /* Opera < 12.1 */
+          animation: slowerfadein 1.6s;
           animation-timing-function: ease-in-out;
 }
 
 #case-study {
-  -webkit-animation: slowerfadein 3s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: slowerfadein 3s; /* Firefox < 16 */
-      -ms-animation: slowerfadein 3s; /* Internet Explorer */
-       -o-animation: slowerfadein 3s; /* Opera < 12.1 */
-          animation: slowerfadein 3s;
+  -webkit-animation: slowerfadein 1.1s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: slowerfadein 1.1s; /* Firefox < 16 */
+      -ms-animation: slowerfadein 1.1s; /* Internet Explorer */
+       -o-animation: slowerfadein 1.1s; /* Opera < 12.1 */
+          animation: slowerfadein 1.1s;
           animation-timing-function: ease-in-out;
 }
 
@@ -361,11 +355,6 @@ a:hover {
           animation: slowerfadein 3s;
           animation-timing-function: ease-in-out;
 }
-
-/*@keyframes backgroundfade {
-from { background-color: #F8F8F8; }
-to   { background-color: white; }
-}*/
 
 @keyframes fadein {
 from { opacity: 0; }
